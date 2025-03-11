@@ -30,16 +30,16 @@ int main() {
      scanf("%s", codigo_carta1);
  
      printf("Digite o nome da cidade: \n");
-     scanf("%s", nome_Cidade_carta1);
+     scanf("%s" , nome_Cidade_carta1);
  
      printf("Digite o número de habitantes da cidade; \n");
      scanf("%d", &populacao_carta1);
  
      printf("Digite a área da cidade em Km: \n");
-     scanf("%d", &area_carta1);
+     scanf("%.2f", &area_carta1);
  
      printf("Digite o Produto Interno Bruto(PIB) da cidade: \n");
-     scanf("%lf", pib_carata1);
+     scanf("%.2lf", pib_carata1);
  
      printf("Digite quantos pontos turisticos existem na cidade: \n");
      scanf("%d", &ponto_Turistico_carta1);
