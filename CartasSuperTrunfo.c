@@ -30,7 +30,7 @@ int main() {
      printf("Digite o código da cartar, a letra do estado seguida de um número 01 a 99 \n");
      scanf("%s", codigo_carta1);
  
-     printf("Digite o nome da cidade: \n");
+     printf("Digite o nome da cidade sem espaço: \n");
      scanf("%s" , nome_Cidade_carta1);
  
      printf("Digite o número de habitantes da cidade; \n");
@@ -68,7 +68,7 @@ int main() {
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     // Entrada de dados pelo ususario para carta 2
-    
+
     printf("CARTA 2\n");
 
     printf("Digite uma letra maiuscula para representar o estado: \n");
@@ -77,7 +77,7 @@ int main() {
     printf("Digite o código da cartar, a letra do estado seguida de um número 01 a 99 \n");
     scanf("%s", codigo_carta2);
 
-    printf("Digite o nome da cidade: \n");
+    printf("Digite o nome da cidade sem espaço: \n");
     scanf("%s" , nome_Cidade_carta2);
 
     printf("Digite o número de habitantes da cidade; \n");
