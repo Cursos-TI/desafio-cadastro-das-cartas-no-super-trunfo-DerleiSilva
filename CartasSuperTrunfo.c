@@ -11,12 +11,13 @@ int main() {
     char estado_carta1, estado_carta2;
     char codigo_carta1[5],codigo_carta2[4];
     char nome_Cidade_carta1[20], nome_Cidade_carta2[20];
-    int populacao_carta1, populacao_carta2;
+    unsigned long int populacao_carta1, populacao_carta2;
     int ponto_Turistico_carta1,ponto_Turistico_carta2;
     float area_carta1, area_carta2;
     float pib_carta1, pib_carta2;
     float pib_percapito_carta1,pib_percapito_carta2;
     float densidade_populacional_carta1,densidade_populacional_carta2;
+    float super_poder_carta1, super_poder_carta2;
 
    
     
@@ -36,7 +37,7 @@ int main() {
      scanf("%s" , nome_Cidade_carta1);
  
      printf("Digite o número de habitantes da cidade; \n");
-     scanf("%d", &populacao_carta1);
+     scanf("%lu", &populacao_carta1);
  
      printf("Digite a área da cidade em Km: \n");
      scanf("%f", &area_carta1);
@@ -53,6 +54,10 @@ int main() {
 
      //Calculando a pib per capito da carta 1
      pib_percapito_carta1 = pib_carta1 / populacao_carta1;
+
+     //Calculando super poder da carta 1
+     super_poder_carta1 = (float)populacao_carta1 + area_carta1 + pib_carta1 + (float)ponto_Turistico_carta1 + pib_carta1 + pib_percapito_carta1 + (1/densidade_populacional_carta1);
+
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -71,7 +76,7 @@ int main() {
     scanf("%s" , nome_Cidade_carta2);
 
     printf("Digite o número de habitantes da cidade; \n");
-    scanf("%d", &populacao_carta2);
+    scanf("%lu", &populacao_carta2);
 
     printf("Digite a área da cidade em Km: \n");
     scanf("%f", &area_carta2);
@@ -89,6 +94,9 @@ int main() {
      //Calculando a pib per capito da carta 2
      pib_percapito_carta2 = pib_carta2 / populacao_carta2;
 
+     //Calculando super poder da carta 2
+     super_poder_carta2 = (float)populacao_carta2 + area_carta2 + pib_carta2 + (float)ponto_Turistico_carta2 + pib_carta2 + pib_percapito_carta2 + (1/densidade_populacional_carta2);
+
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -99,12 +107,15 @@ int main() {
     printf("Estado: %c \n", estado_carta1 );
     printf("Código: %s \n", codigo_carta1);
     printf("Nome da cidade: %s \n", nome_Cidade_carta1);
-    printf("População: %d habitantes\n",populacao_carta1);
+    printf("População: %lu habitantes\n",populacao_carta1);
     printf("Área: %.2f km²\n",area_carta1);
     printf("PIB: %.2f bilhões de reais\n",pib_carta1);
-    printf("Número de Pontos Turísticos: %d \n", ponto_Turistico_carta1);
     printf("Densidade Populacional: %.2f \n", densidade_populacional_carta1);
     printf("PIB per Capita %.2f \n", pib_percapito_carta1);
+    printf("Número de Pontos Turísticos: %d \n", ponto_Turistico_carta1);
+    printf("Super Poder: %f \n", super_poder_carta1);
+    
+    
 
     printf("---------------------------------------------------------------------------\n");
     printf("---------------------------------------------------------------------------\n");
@@ -114,15 +125,27 @@ int main() {
     printf("Estado: %c \n", estado_carta2 );
     printf("Código: %s \n", codigo_carta2);
     printf("Nome da cidade: %s \n", nome_Cidade_carta2);
-    printf("População: %d habitantes\n",populacao_carta2);
+    printf("População: %lu habitantes\n",populacao_carta2);
     printf("Área: %.2f km²\n",area_carta2);
     printf("PIB: %.2f bilhões de reais\n",pib_carta2);
-    printf("Número de Pontos Turísticos: %d \n", ponto_Turistico_carta2);
     printf("Densidade Populacional: %.2f \n", densidade_populacional_carta2);
     printf("PIB per Capita %.2f \n", pib_percapito_carta2);
+    printf("Número de Pontos Turísticos: %d \n", ponto_Turistico_carta2);
+    printf("Super Poder: %f \n", super_poder_carta2);
+
 
     printf("---------------------------------------------------------------------------\n");
     printf("---------------------------------------------------------------------------\n");
+
+    //Comparando as cartas
+
+    Printf("Popolação: ", populacao_carta1 > populacao_carta2);
+    printf("Área: ",area_carta1 > area_carta2);
+    printf("PIB: ", pib_carta1 > pib_carta2);
+    printf("Densidade Populacional: ", densidade_populacional_carta1 < densidade_populacional_carta2);
+    printf("PIB per capita: ", pib_percapito_carta1 > pib_percapito_carta2);
+    printf("Ponto Turistico: ", ponto_Turistico_carta1 > ponto_Turistico_carta2);
+    printf("Super poder: ", super_poder_carta1 > super_poder_carta2);
  
 
     return 0;
