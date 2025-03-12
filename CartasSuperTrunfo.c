@@ -146,7 +146,7 @@ int main() {
     printf("Ponto Turistico: %d \n", ponto_Turistico_carta1 > ponto_Turistico_carta2);
     printf("Super poder: %d \n", super_poder_carta1 > super_poder_carta2);*/
 
-    //Este trcho eu quis deixar mais eladorado e pesquisei para deixa-lo melhor.
+    //Este trecho eu quis deixar mais eladorado e pesquisei para deixa-lo melhor.
     printf("População: Carta %d é a vencedora (%d)\n", (populacao_carta1 > populacao_carta2) ? 1 : 2, populacao_carta1 > populacao_carta2);
     printf("Área: Carta %d é a vencedora (%d)\n", (area_carta1 > area_carta2) ? 1 : 2, area_carta1 > area_carta2);
     printf("PIB: Carta %d é a vencedora (%d)\n", (pib_carta1 > pib_carta2) ? 1 : 2, pib_carta1 > pib_carta2);
